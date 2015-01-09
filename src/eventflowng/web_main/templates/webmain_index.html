@@ -2,7 +2,10 @@
 
 {% block title %}Главная{% endblock %}
 {% block content %}
-	<h1>Eventflow-ng index page</h1>
+	<h1>Eventflow-ng</h1>
 	<hr>
-	<p>Foo</p>
+	<div>
+		<span>Session : </span>
+		<span class="label label-{% if session.status > 0 %}success{% else %}danger{% endif %}">{{ session.status_message }}</span>
+	</div>
 {% endblock %}
